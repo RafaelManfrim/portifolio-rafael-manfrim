@@ -1,25 +1,45 @@
-import { Button, Layout, Space, Timeline, Typography } from "antd"
-import { TypeAnimation } from "react-type-animation"
 import { BsCaretDownFill, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs"
+import { Button, Image, Layout, Space, Timeline, Typography } from "antd"
+import { TypeAnimation } from "react-type-animation"
+import { Link as ScrollLink } from 'react-scroll'
 import { Link } from "react-router-dom"
 
 const { Content } = Layout
 
-const contentContainerStyle: React.CSSProperties = {
-  textAlign: 'center',
-  minHeight: '100vh',
-  lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#8e10e9',
-}
-
-const experienceContainerStyle: React.CSSProperties = {
-  textAlign: 'center',
-  minHeight: '100vh',
-  lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#10e98e',
-}
+const historyItems = [
+  {
+    label: 'Fevereiro de 2020',
+    children: 'Iniciou o curso técnico em desenvolvimento de sistemas integrado ao ensino médio',
+  },
+  {
+    label: 'Setembro de 2020',
+    children: 'Adquiriu seu primeiro curso de desenvolvimento web',
+  },
+  {
+    label: 'Julho de 2021',
+    children: 'Entrou na Nimbus Tecnologia como estagiário',
+  },
+  {
+    label: 'Outubro de 2021',
+    children: 'Iniciou sua formação na Rocketseat',
+  },
+  {
+    label: 'Julho de 2022',
+    children: 'Teve seu estágio prorrogado por mais 6 meses',
+  },
+  {
+    label: 'Novembro de 2022',
+    children: 'Entregou seu TCC e se formou no ensino médio',
+  },
+  {
+    label: 'Janeiro de 2023',
+    children: 'Foi efetivado e iniciou seu trabalho na Nimbus Tecnologia como desenvolvedor júnior',
+  },
+  {
+    label: 'Março de 2023',
+    children: 'Iniciou sua graduação em Análise e Desenvolvimento de Sistemas no IFSP',
+  },
+]
 
 export function Portifolio() {
   return (
@@ -44,44 +64,29 @@ export function Portifolio() {
           cursor={true}
         />
         <Space size="middle">
-          <Link to="https://www.github.com/rafaelmanfrim" className="teste">
+          <Link to="https://www.github.com/rafaelmanfrim">
             <BsGithub />
           </Link>
-          <Link to="https://www.linkedin.com/in/rafael-manfrim/" className="teste">
+          <Link to="https://www.linkedin.com/in/rafael-manfrim/">
             <BsLinkedin />
           </Link>
-          <Link to="https://www.instagram.com/rafamanfrim/" className="teste">
+          <Link to="https://www.instagram.com/rafamanfrim/">
             <BsInstagram />
           </Link>
         </Space>
-        <Button size="large" type="primary" shape="circle" icon={<BsCaretDownFill />} />
+        <ScrollLink to="timeline-container" smooth>
+          <Button size="large" type="primary" shape="circle" icon={<BsCaretDownFill />} />
+        </ScrollLink>
       </Content>
-      <Content style={contentContainerStyle}>
-        <div>FOTO MINHA</div>
-        <Timeline
-          mode="left"
-          items={[
-            {
-              label: '2015-09-01',
-              children: 'Create a services',
-              color: 'green',
-            },
-            {
-              label: '2015-09-01 09:12:11',
-              children: 'Solve initial network problems',
-            },
-            {
-              children: 'Technical testing',
-            },
-            {
-              label: '2015-09-01 09:12:11',
-              children: 'Network problems being solved',
-            },
-          ]}
-        />
+      <Content className="timeline-container" id="timeline-container">
+        <Typography.Title>Linha do Tempo</Typography.Title>
+        <Space>
+          <Image src="/eu.jpg" alt="Foto Rafael Manfrim" preview={false} />
+          <Timeline mode="left" items={historyItems} />
+        </Space>
       </Content>
-      <Content style={experienceContainerStyle}>
-        <Typography>Especializações</Typography>
+      <Content className="specialization-container">
+        <Typography.Title>Especializações</Typography.Title>
       </Content>
     </Layout>
   )
