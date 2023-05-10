@@ -4,8 +4,6 @@ import { TypeAnimation } from "react-type-animation"
 import { Link as ScrollLink } from 'react-scroll'
 import { Link } from "react-router-dom"
 
-const { Content } = Layout
-
 const historyItems = [
   {
     label: 'Fevereiro de 2020',
@@ -41,53 +39,76 @@ const historyItems = [
   },
 ]
 
+type Formation = {
+  title: string
+  tag: 'Front-End' | 'Back-End'
+  school: string
+  description: string
+  certificate: string
+}
+
+const formations: Formation[] = [
+  {
+    title: 'ReactJS',
+    school: 'Rocketseat',
+    tag: 'Front-End',
+    description: 'Curso avançado de ReactJS.',
+    certificate: 'link'
+  }
+]
+
 export function Portifolio() {
   return (
     <Layout>
-      <Content className="presentation-container">
+      <Layout.Content className="presentation-container">
         <Typography.Title>
           Rafael Manfrim
         </Typography.Title>
         <TypeAnimation
           sequence={[
-            `Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut lab, 
-            sed do eiusmod tempor incididunt ut lab, sed do eiusmod tempor incididunt ut lab,
-            sed do eiusmod tempor incididunt ut lab, sed do eiusmod tempor incididunt ut lab,
-            sed do eiusmod tempor incididunt ut lab, sed do eiusmod tempor incididunt ut lab,
-            sed do eiusmod tempor incididunt ut lab, sed do eiusmod tempor incididunt ut lab,
-            sed do eiusmod tempor incididunt ut lab, sed do eiusmod tempor incididunt ut lab,
-            sed do eiusmod tempor incididunt ut lab, sed do eiusmod tempor incididunt ut lab,
-            sed do eiusmod tempor incididunt ut lab, sed do eiusmod tempor incididunt ut lab,`,
+            'Desde criança sempre se encantou por tecnologia, o que o levou a cursar desenvolvimento de sistemas e se tornar um programador de destaque, após pouco tempo de curso já estava atuando no mercado de trabalho como desenvolvedor front-end e mais tarde buscou conhecimento para se tornar full-stack.',
             2000,
           ]}
           wrapper="p"
           cursor={true}
         />
         <Space size="middle">
-          <Link to="https://www.github.com/rafaelmanfrim">
+          <Link to="https://www.github.com/rafaelmanfrim" target="_blank">
             <BsGithub />
           </Link>
-          <Link to="https://www.linkedin.com/in/rafael-manfrim/">
+          <Link to="https://www.linkedin.com/in/rafael-manfrim/" target="_blank">
             <BsLinkedin />
           </Link>
-          <Link to="https://www.instagram.com/rafamanfrim/">
+          <Link to="https://www.instagram.com/rafamanfrim/" target="_blank">
             <BsInstagram />
           </Link>
         </Space>
         <ScrollLink to="timeline-container" smooth>
           <Button size="large" type="primary" shape="circle" icon={<BsCaretDownFill />} />
         </ScrollLink>
-      </Content>
-      <Content className="timeline-container" id="timeline-container">
+      </Layout.Content>
+      <Layout.Content className="timeline-container" id="timeline-container">
         <Typography.Title>Linha do Tempo</Typography.Title>
         <Space>
           <Image src="/eu.jpg" alt="Foto Rafael Manfrim" preview={false} />
           <Timeline mode="left" items={historyItems} />
         </Space>
-      </Content>
-      <Content className="specialization-container">
+      </Layout.Content>
+      <Layout.Content className="specialization-container">
         <Typography.Title>Especializações</Typography.Title>
-      </Content>
+        {/* Colocar um slider de formações */}
+        {formations.map(formation => (
+          <div>
+            <div>
+              <strong>{formation.title}</strong>
+              <span>{formation.tag}</span>
+            </div>
+            <span>{formation.school}</span>
+            <p>{formation.description}</p>
+            <a href={formation.certificate}>Acessar certificado</a>
+          </div>
+        ))}
+      </Layout.Content>
     </Layout>
   )
 }
