@@ -105,8 +105,7 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 6rem 2rem;
-  background-color: #0b3a6f;
-  // Colocar outra textura
+  background: url('/papel-de-parede.png'), #0C194D;
 
   h1 {
     color: #fff;
@@ -120,7 +119,6 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    // background-image: ; Colocar uma textura
   }
 
   .ant-space-item {
@@ -130,7 +128,7 @@ body {
   img {
     max-width: 100%;
     height: 100%;
-    max-height: 1024px;
+    max-height: 768px;
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
     border-radius: 8px;
   }
@@ -147,4 +145,29 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 6rem 2rem;
+
+  h1 {
+    color: #0C194D;
+    margin-bottom: 4rem;
+  }
+
+  .ant-col {
+    margin-bottom: 16px;
+  }
+
+  .ant-card-head-title {
+    color: #0C194D;
+  }
+
+  .ant-card-body {
+    p {
+      color: #595959;
+    }
+
+    span {
+      color: #0C194D;
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
 }

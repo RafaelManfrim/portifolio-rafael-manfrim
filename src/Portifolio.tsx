@@ -1,5 +1,5 @@
 import { BsCaretDownFill, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs"
-import { Button, Image, Layout, Space, Timeline, Typography } from "antd"
+import { Button, Card, Col, Image, Layout, Row, Space, Tag, Timeline, Typography } from "antd"
 import { TypeAnimation } from "react-type-animation"
 import { Link as ScrollLink } from 'react-scroll'
 import { Link } from "react-router-dom"
@@ -85,6 +85,13 @@ const formations: Formation[] = [
   }
 ]
 
+const tagColors = {
+  'Front-End': 'blue',
+  'Back-End': 'green',
+  'Mobile': 'orange',
+  'Outros': 'purple',
+}
+
 export function Portifolio() {
   return (
     <Layout>
@@ -118,24 +125,29 @@ export function Portifolio() {
       <Layout.Content className="timeline-container" id="timeline-container">
         <Typography.Title>Linha do Tempo</Typography.Title>
         <Space>
-          <Image src="/eu.jpg" alt="Foto Rafael Manfrim" preview={false} />
+          <Image src="/rafael-manfrim.jpeg" alt="Foto Rafael Manfrim" preview={false} />
           <Timeline mode="left" items={historyItems} />
         </Space>
       </Layout.Content>
       <Layout.Content className="specialization-container">
         <Typography.Title>Especializações</Typography.Title>
-        {/* Colocar um slider de formações */}
-        {formations.map(formation => (
-          <div>
-            <div>
-              <strong>{formation.title}</strong>
-              <span>{formation.tag}</span>
-            </div>
-            <span>{formation.school}</span>
-            <p>{formation.description}</p>
-            <a href={formation.certificate}>Acessar certificado</a>
-          </div>
-        ))}
+        <Row gutter={16}>
+          {formations.map(formation => (
+            <Col xs={24} md={12} xl={8}>
+              <Card
+                title={formation.title}
+                extra={<Tag color={tagColors[formation.tag]}>{formation.tag}</Tag>}
+                bordered={false}
+              >
+                <p>{formation.description}</p>
+                <span>#{formation.school}</span>
+                <Link to={formation.certificate} target="_blank">
+                  Acessar certificado
+                </Link>
+              </Card>
+            </Col>
+          ))}
+        </Row>
       </Layout.Content>
     </Layout>
   )
