@@ -41,7 +41,7 @@ const historyItems = [
 
 type Formation = {
   title: string
-  tag: 'Front-End' | 'Back-End'
+  tag: 'Front-End' | 'Back-End' | 'Mobile' | 'Outros'
   school: string
   description: string
   certificate: string
@@ -53,6 +53,34 @@ const formations: Formation[] = [
     school: 'Rocketseat',
     tag: 'Front-End',
     description: 'Curso avançado de ReactJS.',
+    certificate: 'link'
+  },
+  {
+    title: 'React Native',
+    school: 'Rocketseat',
+    tag: 'Mobile',
+    description: 'Curso de React Native',
+    certificate: 'link'
+  },
+  {
+    title: 'NodeJS',
+    school: 'Rocketseat',
+    tag: 'Back-End',
+    description: 'Curso de NodeJS',
+    certificate: 'link'
+  },
+  {
+    title: 'Elixir',
+    school: 'Rocketseat',
+    tag: 'Back-End',
+    description: 'Criando APIs Rest com Elixir',
+    certificate: 'link'
+  },
+  {
+    title: 'Expressões Regulares',
+    school: 'Cod3r | Udemy',
+    tag: 'Outros',
+    description: "Introdução a expressões regulares.",
     certificate: 'link'
   }
 ]
