@@ -52,36 +52,36 @@ const formations: Formation[] = [
     title: 'ReactJS',
     school: 'Rocketseat',
     tag: 'Front-End',
-    description: 'Curso avançado de ReactJS.',
-    certificate: 'link'
+    description: 'Curso avançado de ReactJS, usando diversas bibliotecas front-end, além de NextJS e realizando deploy.',
+    certificate: 'https://drive.google.com/file/d/1BsQc0vtMgnLNHAwG5vZodY6rdCRTj_UM/view?usp=share_link'
   },
   {
     title: 'React Native',
     school: 'Rocketseat',
     tag: 'Mobile',
-    description: 'Curso de React Native',
-    certificate: 'link'
+    description: 'Curso de React Native com offline-first, construção de interfaces, deploy e muito mais.',
+    certificate: 'https://drive.google.com/file/d/1yeLpm8dsmhLoU4W3SOpuck9sir0y0FPc/view?usp=share_link'
   },
   {
     title: 'NodeJS',
     school: 'Rocketseat',
     tag: 'Back-End',
-    description: 'Curso de NodeJS',
-    certificate: 'link'
+    description: 'Curso completo de NodeJS do zero ao deploy, com acesso a banco de dados, criação de APIs Rest, padrões de projeto e Serverless.',
+    certificate: 'https://drive.google.com/file/d/1UnF9purquVJECTZCFqacxobO6RAMLgOw/view?usp=share_link'
   },
   {
     title: 'Elixir',
     school: 'Rocketseat',
     tag: 'Back-End',
-    description: 'Criando APIs Rest com Elixir',
-    certificate: 'link'
+    description: 'Aprendendo os fundamentos e criando APIs Rest com Elixir',
+    certificate: 'https://drive.google.com/file/d/1_DF4T-x2FMMjK82IFR9aifPG8Vn6uCC6/view?usp=share_link'
   },
   {
-    title: 'Expressões Regulares',
+    title: 'Fundamentos de Expressões Regulares (Regex)',
     school: 'Cod3r | Udemy',
     tag: 'Outros',
     description: "Introdução a expressões regulares.",
-    certificate: 'link'
+    certificate: 'https://drive.google.com/file/d/1Wo2Wnt5Xf-GvHWlv0-5_v5btMNu8nJyw/view?usp=share_link'
   }
 ]
 
