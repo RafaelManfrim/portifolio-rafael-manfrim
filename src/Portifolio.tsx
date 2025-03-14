@@ -53,35 +53,35 @@ const formations: Formation[] = [
     school: 'Rocketseat',
     tag: 'Front-End',
     description: 'Curso avançado de ReactJS, usando diversas bibliotecas front-end, além de NextJS e realizando deploy.',
-    certificate: 'https://drive.google.com/file/d/1BsQc0vtMgnLNHAwG5vZodY6rdCRTj_UM/view?usp=share_link'
+    certificate: 'https://drive.google.com/file/d/1VWgVsjzBxv_xK8YwlevpVCME2gjPi5vz/view?usp=sharing'
   },
   {
     title: 'React Native',
     school: 'Rocketseat',
     tag: 'Mobile',
     description: 'Curso de React Native com offline-first, construção de interfaces, deploy e muito mais.',
-    certificate: 'https://drive.google.com/file/d/1yeLpm8dsmhLoU4W3SOpuck9sir0y0FPc/view?usp=share_link'
+    certificate: 'https://drive.google.com/file/d/1nEk_cUTTXHF5-4jCILUwWMyOpHs0eSYk/view?usp=sharing'
   },
   {
     title: 'NodeJS',
     school: 'Rocketseat',
     tag: 'Back-End',
     description: 'Curso completo de NodeJS do zero ao deploy, com acesso a banco de dados, criação de APIs Rest, padrões de projeto e Serverless.',
-    certificate: 'https://drive.google.com/file/d/1UnF9purquVJECTZCFqacxobO6RAMLgOw/view?usp=share_link'
+    certificate: 'https://drive.google.com/file/d/1jc8hnvd_M6xUEicouJvy1ynQ1mXzHoih/view?usp=sharing'
   },
   {
     title: 'Elixir',
     school: 'Rocketseat',
     tag: 'Back-End',
     description: 'Aprendendo os fundamentos e criando APIs Rest com Elixir',
-    certificate: 'https://drive.google.com/file/d/1_DF4T-x2FMMjK82IFR9aifPG8Vn6uCC6/view?usp=share_link'
+    certificate: 'https://drive.google.com/file/d/1LEDwhUQok56QaJ1RDLejRBxzRuLBOZKE/view?usp=sharing'
   },
   {
     title: 'Fundamentos de Expressões Regulares (Regex)',
     school: 'Cod3r | Udemy',
     tag: 'Outros',
     description: "Introdução a expressões regulares.",
-    certificate: 'https://drive.google.com/file/d/1Wo2Wnt5Xf-GvHWlv0-5_v5btMNu8nJyw/view?usp=share_link'
+    certificate: 'https://drive.google.com/file/d/14K-HkBMGz2UMLNkFFxBDkNlINXwVHOZ1/view?usp=sharing'
   }
 ]
 
@@ -97,16 +97,16 @@ export function Portifolio() {
     <Layout>
       <Layout.Content className="presentation-container">
         <Typography.Title>
-          Rafael Manfrim
+          <TypeAnimation
+            sequence={[
+              'Rafael Manfrim',
+              2000,
+            ]}
+            wrapper="strong"
+            cursor={true}
+          />
         </Typography.Title>
-        <TypeAnimation
-          sequence={[
-            'Desde criança sempre se encantou por tecnologia, o que o levou a cursar desenvolvimento de sistemas e se tornar um programador de destaque, após pouco tempo de curso já estava atuando no mercado de trabalho como desenvolvedor front-end e mais tarde buscou conhecimento para se tornar full-stack.',
-            2000,
-          ]}
-          wrapper="p"
-          cursor={true}
-        />
+        <p>Desde criança sempre se encantou por tecnologia, o que o levou a cursar desenvolvimento de sistemas e se tornar um programador de destaque, após pouco tempo de curso já estava atuando no mercado de trabalho como desenvolvedor front-end e mais tarde buscou conhecimento para se tornar full-stack.</p>
         <Space size="middle">
           <Link to="https://www.github.com/rafaelmanfrim" target="_blank">
             <BsGithub />
